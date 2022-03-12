@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+
+        <item
+
+            android:id="@+id/itemRegistro"
+            android:title = "Registro de Revisión"
+            android:icon="@drawable/ic_registro"
+            android:checked="true"/>
+
+        <item
+            android:id="@+id/itemBusqueda"
+            android:title = "Búsqueda de Revisión"
+            android:icon="@drawable/ic_buscar"/>
+
+        <item
+            android:id="@+id/itemModificacion"
+            android:title = "Modificación de Revisión"
+            android:icon="@drawable/ic_modificar"/>
+
+        <item
+            android:id="@+id/itemEliminacion"
+            android:title = "Eliminación de Revisión"
+            android:icon="@drawable/ic_borrar"/>
+
+
+
+    </group>
+
+</menu>
