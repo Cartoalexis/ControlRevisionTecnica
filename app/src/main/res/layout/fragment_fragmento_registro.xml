@@ -580,7 +580,6 @@
                                 android:textColor="@color/gris_oscuro"/>
                         </RadioGroup>
                     </TableRow>
-
                  </TableLayout>
 
                 <LinearLayout
@@ -589,7 +588,6 @@
                     android:orientation="horizontal"
                     android:background="@color/white"
                     android:layout_margin="5dp">
-
                     <Button
                         android:id="@+id/btnTomarFoto"
                         android:layout_width="match_parent"
@@ -598,7 +596,6 @@
                         android:layout_margin="2dp"
                         android:textStyle="bold"
                         android:text="@string/btn_tomar_foto" />
-
                     <Button
                         android:id="@+id/btnGuardarFoto"
                         android:layout_width="match_parent"
@@ -610,23 +607,40 @@
 
                 </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical" >
-
-                <EditText
-                    android:id="@+id/txtObservaciones"
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="48dp"
-                    android:ems="10"
-                    android:inputType="textPersonName"
-                    android:hint="@string/obsercaciones"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+                    <EditText
+                        android:id="@+id/txtObservaciones"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:hint="@string/obsercaciones"
+                        android:background="@color/white"
+                        android:textSize="@dimen/txt_registro"
+                        android:textStyle="bold"
+                        android:layout_margin="5dp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
                     android:background="@color/white"
-                    android:textSize="@dimen/txt_registro"
-                    android:textStyle="bold"
-                    android:layout_margin="5dp"/>
-            </LinearLayout>
+                    android:layout_margin="5dp">
+                    <Button
+                        android:id="@+id/btnGuardarDatos"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:layout_margin="2dp"
+                        android:textStyle="bold"
+                        android:text="@string/btn_guardar_datos" />
+                </LinearLayout>
+
+
 
 
 
