@@ -5,30 +5,76 @@ xmlns:app="http://schemas.android.com/apk/res-auto"
 xmlns:tools="http://schemas.android.com/tools"
 android:layout_width="match_parent"
 android:layout_height="match_parent"
-tools:context=".Activity2">
+tools:context=".Activity2"
+    android:background="@android:color/holo_blue_bright">
+
+    <ImageView
+        android:id="@+id/imageLogo"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="36dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/ic_car2"
+        android:layout_gravity="center"/>
+
+
+    <TextView
+        android:id="@+id/txtLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="CONTROL REVISIÓN "
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageLogo" />
+
+    <TextView
+        android:id="@+id/txtLogo2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="TÉCNICA "
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtLogo" />
+
 
     <EditText
         android:id="@+id/txtUsuario"
         android:layout_width="245dp"
         android:layout_height="67dp"
-        android:layout_marginTop="96dp"
+        android:layout_marginTop="40dp"
+        android:background="@color/white"
         android:ems="10"
         android:hint="Ingrese Usuario"
         android:inputType="textPersonName"
-        android:textSize="20sp"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/txtLogo2" />
 
     <EditText
         android:id="@+id/txtContrasena"
         android:layout_width="245dp"
-        android:layout_height="65dp"
-        android:layout_marginTop="20dp"
+        android:layout_height="67dp"
+        android:layout_marginTop="48dp"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:hint="Ingrese Clave"
-        android:textSize="20sp"
+        android:background="@color/white"
+        android:hint="Ingrese Contraseña"
+        android:inputType="textPassword"
+        android:textSize="24sp"
+        android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtUsuario" />
@@ -37,10 +83,16 @@ tools:context=".Activity2">
         android:id="@+id/btnLogin"
         android:layout_width="173dp"
         android:layout_height="60dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="44dp"
         android:text="LOGIN"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtContrasena" />
+
+
+
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
