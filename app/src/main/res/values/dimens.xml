@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="padding_general">20dp</dimen>
+    <dimen name="rb_registro">18sp</dimen>
+    <dimen name="txt_registro">20sp</dimen>
+    <dimen name="radio_group">8dp</dimen>
 </resources>

@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".FragmentoRegistro"
     android:background="@color/gris_claro">
 
-    <!-- TODO: Update blank fragment layout -->
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -25,16 +26,612 @@
                 <EditText
                     android:id="@+id/txtIdCodigo"
                     android:layout_width="match_parent"
-                    android:layout_height="40dp"
+                    android:layout_height="48dp"
                     android:ems="10"
                     android:inputType="textPersonName"
-                    android:hint="Ingrese código"
+                    android:hint="@string/ingrese_codigo"
                     android:background="@color/white"
-                    android:textSize="24dp"
-                    android:textStyle="bold"/>
+                    android:textSize="@dimen/txt_registro"
+                    android:textStyle="bold"
+                    android:layout_margin="5dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/txtFecha"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_margin="5dp"
+                        android:background="@color/white"
+                        android:ems="10"
+                        android:hint="@string/ingrese_fecha"
+                        android:inputType="textPersonName"
+                        android:textSize="@dimen/txt_registro"
+                        android:textStyle="bold"
+                        android:layout_weight="1"
+                        />
+
+                    <Button
+                        android:id="@+id/btnFecha"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:layout_margin="2dp"
+                        android:textStyle="bold"
+                        android:text="@string/btn_fecha" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/txtHora"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_margin="5dp"
+                        android:background="@color/white"
+                        android:ems="10"
+                        android:hint="@string/ingrese_hora"
+                        android:inputType="textPersonName"
+                        android:textSize="@dimen/txt_registro"
+                        android:textStyle="bold"
+                        android:layout_weight="1"
+                        />
+
+                    <Button
+                        android:id="@+id/btnHora"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:layout_margin="2dp"
+                        android:textStyle="bold"
+                        android:text="@string/btn_hora" />
+
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/txtDoc"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_margin="5dp"
+                    android:background="@color/white"
+                    android:ems="10"
+                    android:hint="@string/documentacion_vehiculo"
+                    android:inputType="textPersonName"
+                    android:textSize="@dimen/txt_registro"
+                    android:textStyle="bold"
+                    />
+
+                <EditText
+                    android:id="@+id/txtPatente"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_margin="5dp"
+                    android:background="@color/white"
+                    android:ems="10"
+                    android:hint="@string/ingrese_patente_vehicular"
+                    android:inputType="textPersonName"
+                    android:textSize="@dimen/txt_registro"
+                    android:textStyle="bold"
+                    />
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:layout_margin="5dp">
+                        <TextView
+                            android:id="@+id/txtDireccion"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="@string/sistema_de_direccion"
+                            android:textSize="@dimen/txt_registro"
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            android:gravity="center"/>
+                        <RadioGroup
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginLeft="@dimen/radio_group">
+                            <RadioButton
+                                android:id="@+id/rbOK_SD"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/ok"
+                                android:textSize="@dimen/rb_registro"
+                                android:textStyle="bold"
+                                android:textColor="@color/gris_oscuro"/>
+                            <RadioButton
+                                android:id="@+id/rbR_SD"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/rechazado"
+                                android:textSize="@dimen/rb_registro"
+                                android:textStyle="bold"
+                                android:textColor="@color/gris_oscuro"/>
+                        </RadioGroup>
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:layout_margin="5dp">
+                        <TextView
+                            android:id="@+id/txtFrenos"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="@string/frenos"
+                            android:textSize="@dimen/txt_registro"
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            android:gravity="center_vertical"/>
+                        <RadioGroup
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginLeft="@dimen/radio_group">
+                            <RadioButton
+                                android:id="@+id/rbOK_Frenos"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/ok"
+                                android:textSize="@dimen/rb_registro"
+                                android:textStyle="bold"
+                                android:textColor="@color/gris_oscuro"/>
+                            <RadioButton
+                                android:id="@+id/rbR_Frenos"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/rechazado"
+                                android:textSize="@dimen/rb_registro"
+                                android:textStyle="bold"
+                                android:textColor="@color/gris_oscuro"/>
+                        </RadioGroup>
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:layout_margin="5dp">
+                        <TextView
+                            android:id="@+id/txtNeumaticos"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="@string/neumaticos"
+                            android:textSize="@dimen/txt_registro"
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            android:gravity="center_vertical"/>
+                        <RadioGroup
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginLeft="@dimen/radio_group">
+                            <RadioButton
+                                android:id="@+id/rbOK_Neumaticos"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/ok"
+                                android:textSize="@dimen/rb_registro"
+                                android:textStyle="bold"
+                                android:textColor="@color/gris_oscuro"/>
+                            <RadioButton
+                                android:id="@+id/rbR_Neumaticos"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/rechazado"
+                                android:textSize="@dimen/rb_registro"
+                                android:textStyle="bold"
+                                android:textColor="@color/gris_oscuro"/>
+                        </RadioGroup>
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:layout_margin="5dp">
+                        <TextView
+                            android:id="@+id/txtSuspension"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="@string/suspension"
+                            android:textSize="@dimen/txt_registro"
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            android:gravity="center_vertical"/>
+                        <RadioGroup
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginLeft="@dimen/radio_group">
+                            <RadioButton
+                                android:id="@+id/rbOK_Suspension"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/ok"
+                                android:textSize="@dimen/rb_registro"
+                                android:textStyle="bold"
+                                android:textColor="@color/gris_oscuro"/>
+                            <RadioButton
+                                android:id="@+id/rbR_Suspension"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/rechazado"
+                                android:textSize="@dimen/rb_registro"
+                                android:textStyle="bold"
+                                android:textColor="@color/gris_oscuro"/>
+                        </RadioGroup>
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:layout_margin="5dp">
+                        <TextView
+                            android:id="@+id/txtAlineacion"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="@string/alineacion"
+                            android:textSize="@dimen/txt_registro"
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            android:gravity="center_vertical"/>
+                        <RadioGroup
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginLeft="@dimen/radio_group">
+                            <RadioButton
+                                android:id="@+id/rbOK_Alineacion"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/ok"
+                                android:textSize="@dimen/rb_registro"
+                                android:textStyle="bold"
+                                android:textColor="@color/gris_oscuro"/>
+                            <RadioButton
+                                android:id="@+id/rbR_Alineacion"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/rechazado"
+                                android:textSize="@dimen/rb_registro"
+                                android:textStyle="bold"
+                                android:textColor="@color/gris_oscuro"/>
+                        </RadioGroup>
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:layout_margin="5dp">
+                        <TextView
+                            android:id="@+id/txtKid"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="@string/Kit"
+                            android:textSize="@dimen/txt_registro"
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            android:gravity="center_vertical"/>
+                        <RadioGroup
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginLeft="@dimen/radio_group">
+                            <RadioButton
+                                android:id="@+id/rbOK_Kit"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/ok"
+                                android:textSize="@dimen/rb_registro"
+                                android:textStyle="bold"
+                                android:textColor="@color/gris_oscuro"/>
+                            <RadioButton
+                                android:id="@+id/rbR_Kit"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/rechazado"
+                                android:textSize="@dimen/rb_registro"
+                                android:textStyle="bold"
+                                android:textColor="@color/gris_oscuro"/>
+                        </RadioGroup>
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:layout_margin="5dp">
+                        <TextView
+                            android:id="@+id/txtCinturon"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="@string/cinturon"
+                            android:textSize="@dimen/txt_registro"
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            android:gravity="center_vertical"/>
+                        <RadioGroup
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginLeft="@dimen/radio_group">
+                            <RadioButton
+                                android:id="@+id/rbOK_Seguridad"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/ok"
+                                android:textSize="@dimen/rb_registro"
+                                android:textStyle="bold"
+                                android:textColor="@color/gris_oscuro"/>
+                            <RadioButton
+                                android:id="@+id/rbR_Seguridad"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/rechazado"
+                                android:textSize="@dimen/rb_registro"
+                                android:textStyle="bold"
+                                android:textColor="@color/gris_oscuro"/>
+                        </RadioGroup>
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:layout_margin="5dp">
+                        <TextView
+                            android:id="@+id/txtLuces"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="@string/luces"
+                            android:textSize="@dimen/txt_registro"
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            android:gravity="center_vertical"/>
+                        <RadioGroup
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginLeft="@dimen/radio_group">
+                            <RadioButton
+                                android:id="@+id/rbOK_Luces"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/ok"
+                                android:textSize="@dimen/rb_registro"
+                                android:textStyle="bold"
+                                android:textColor="@color/gris_oscuro"/>
+                            <RadioButton
+                                android:id="@+id/rbR_Luces"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/rechazado"
+                                android:textSize="@dimen/rb_registro"
+                                android:textStyle="bold"
+                                android:textColor="@color/gris_oscuro"/>
+                        </RadioGroup>
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:layout_margin="5dp">
+                        <TextView
+                            android:id="@+id/txtPuertas"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="@string/puertas"
+                            android:textSize="@dimen/txt_registro"
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            android:gravity="center_vertical"/>
+                        <RadioGroup
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginLeft="@dimen/radio_group">
+                            <RadioButton
+                                android:id="@+id/rbOK_Puertas"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/ok"
+                                android:textSize="@dimen/rb_registro"
+                                android:textStyle="bold"
+                                android:textColor="@color/gris_oscuro"/>
+                            <RadioButton
+                                android:id="@+id/rbR_Puertas"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/rechazado"
+                                android:textSize="@dimen/rb_registro"
+                                android:textStyle="bold"
+                                android:textColor="@color/gris_oscuro"/>
+                        </RadioGroup>
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:layout_margin="5dp">
+                        <TextView
+                            android:id="@+id/txtVidrios"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="@string/vidrios"
+                            android:textSize="@dimen/txt_registro"
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            android:gravity="center_vertical"/>
+                        <RadioGroup
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginLeft="@dimen/radio_group">
+                            <RadioButton
+                                android:id="@+id/rbOK_Vidrios"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/ok"
+                                android:textSize="@dimen/rb_registro"
+                                android:textStyle="bold"
+                                android:textColor="@color/gris_oscuro"/>
+                            <RadioButton
+                                android:id="@+id/rbR_Vidrios"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/rechazado"
+                                android:textSize="@dimen/rb_registro"
+                                android:textStyle="bold"
+                                android:textColor="@color/gris_oscuro"/>
+                        </RadioGroup>
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:layout_margin="5dp">
+                        <TextView
+                            android:id="@+id/txtTuboEscape"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="@string/tubo_esc"
+                            android:textSize="@dimen/txt_registro"
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            android:gravity="center_vertical"/>
+                        <RadioGroup
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginLeft="@dimen/radio_group">
+                            <RadioButton
+                                android:id="@+id/rbOK_tubo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/ok"
+                                android:textSize="@dimen/rb_registro"
+                                android:textStyle="bold"
+                                android:textColor="@color/gris_oscuro"/>
+                            <RadioButton
+                                android:id="@+id/rbR_tubo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/rechazado"
+                                android:textSize="@dimen/rb_registro"
+                                android:textStyle="bold"
+                                android:textColor="@color/gris_oscuro"/>
+                        </RadioGroup>
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:layout_margin="5dp">
+                        <TextView
+                            android:id="@+id/txtGases"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="@string/gases"
+                            android:textSize="@dimen/txt_registro"
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            android:gravity="center_vertical"/>
+                        <RadioGroup
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginLeft="@dimen/radio_group">
+                            <RadioButton
+                                android:id="@+id/rbOK_gases"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/ok"
+                                android:textSize="@dimen/rb_registro"
+                                android:textStyle="bold"
+                                android:textColor="@color/gris_oscuro"/>
+                            <RadioButton
+                                android:id="@+id/rbR_gases"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/rechazado"
+                                android:textSize="@dimen/rb_registro"
+                                android:textStyle="bold"
+                                android:textColor="@color/gris_oscuro"/>
+                        </RadioGroup>
+                    </TableRow>
+
+                 </TableLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:background="@color/white"
+                    android:layout_margin="5dp">
+
+                    <Button
+                        android:id="@+id/btnTomarFoto"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:layout_margin="2dp"
+                        android:textStyle="bold"
+                        android:text="@string/btn_tomar_foto" />
+
+                    <Button
+                        android:id="@+id/btnGuardarFoto"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:layout_margin="2dp"
+                        android:textStyle="bold"
+                        android:text="@string/btn_gurdar_foto" />
+
+                </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <EditText
+                    android:id="@+id/txtObservaciones"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:hint="@string/obsercaciones"
+                    android:background="@color/white"
+                    android:textSize="@dimen/txt_registro"
+                    android:textStyle="bold"
+                    android:layout_margin="5dp"/>
+            </LinearLayout>
+
 
 
             </LinearLayout>
+
         </ScrollView>
 
     </LinearLayout>
